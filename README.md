@@ -59,33 +59,65 @@
       border-radius: 5px;
       border: 1px solid #ccc;
     }
-    #musicControl {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 30px;
-      padding: 5px 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      font-size: 14px;
-    }
   </style>
 </head>
 <body>
 
 <h1>💌 Hey sweetie, let's play a fun quiz!<br>How well do you know me?</h1>
 
-<!-- Audio Backsound -->
-<audio id="bgMusic" autoplay loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-littleidea.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-<button id="musicControl" onclick="toggleMusic()">Pause Music</button>
-
 <form id="quizForm">
-  <!-- Slides here (unchanged from previous version)... -->
-  <!-- Hanya bagian JavaScript dan backsound yang ditambahkan -->
+
+  <div class="slide active">
+    <strong>🌤 But before we start... how are you today?</strong><br>
+    <label><input type="radio" name="mood" value="good"> 😊 I'm good</label>
+    <label><input type="radio" name="mood" value="not_good"> 🙁 Not so good</label>
+    <button type="button" onclick="nextSlide()">Next</button>
+  </div>
+
+  <div class="slide">
+    <strong>1. What month was I born?</strong><br>
+    <label><input type="radio" name="q0" value="february"> ❄️ February</label>
+    <label><input type="radio" name="q0" value="december"> 🎄 December</label>
+    <label><input type="radio" name="q0" value="june"> ☀️ June</label>
+    <button type="button" onclick="nextSlide()">Next</button>
+  </div>
+
+  <div class="slide">
+    <strong>2. What's my favorite color?</strong><br>
+    <label><input type="radio" name="q00" value="blue"> 💙 Blue</label>
+    <label><input type="radio" name="q00" value="pink"> 💖 Pink</label>
+    <label><input type="radio" name="q00" value="yellow"> 💛 Yellow</label>
+    <button type="button" onclick="nextSlide()">Next</button>
+  </div>
+
+  <div class="slide">
+    <strong>3. What food do I love the most?</strong><br>
+    <label><input type="radio" name="q1" value="pizza"> 🍕 Pizza</label>
+    <label><input type="radio" name="q1" value="noodles"> 🍜 Instant Noodles</label>
+    <button type="button" onclick="nextSlide()">Next</button>
+  </div>
+
+  <div class="slide">
+    <strong>4. What do I prefer on weekends?</strong><br>
+    <label><input type="radio" name="q2" value="sleep"> 🛏 Sleep all day</label>
+    <label><input type="radio" name="q2" value="walk"> 🏞 Go out for a walk</label>
+    <button type="button" onclick="nextSlide()">Next</button>
+  </div>
+
+  <div class="slide">
+    <strong>5. My favorite animal is:</strong><br>
+    <label><input type="radio" name="q3" value="cat"> 🐱 Cat</label>
+    <label><input type="radio" name="q3" value="dog"> 🐶 Dog</label>
+    <button type="button" onclick="nextSlide()">Next</button>
+  </div>
+
+  <div class="slide">
+    <strong>6. When I’m upset, I usually...</strong><br>
+    <label><input type="radio" name="q4" value="music"> 🎧 Listen to music</label>
+    <label><input type="radio" name="q4" value="sleep"> 💤 Sleep it off</label>
+    <button type="button" onclick="showResult()">See Result</button>
+  </div>
+
 </form>
 
 <div class="result" id="resultBox">
@@ -105,8 +137,6 @@
 <script>
   let currentSlide = 0;
   const slides = document.querySelectorAll(".slide");
-  const bgMusic = document.getElementById("bgMusic");
-  const musicControl = document.getElementById("musicControl");
 
   function nextSlide() {
     slides[currentSlide].classList.remove("active");
@@ -135,33 +165,25 @@
     }
 
     let mood = document.querySelector('input[name="mood"]:checked');
-    let moodMessage = mood
-      ? (mood.value === "good"
-          ? "Yay! I'm so glad you're feeling good today! 😊"
-          : "Hope this quiz helped cheer you up a little! 💛")
-      : "You didn’t answer how you’re feeling... but I hope you’re okay~";
+    let moodMessage = "";
+    if (mood) {
+      moodMessage = mood.value === "good"
+        ? "Yay! I'm so glad you're feeling good today! 😊"
+        : "Hope this quiz helped cheer you up a little! 💛";
+    } else {
+      moodMessage = "You didn’t answer how you’re feeling... but I hope you’re okay~";
+    }
 
-    let message = score === 6
-      ? "6/6! You totally know me! 💯✨"
-      : score >= 4
-        ? score + "/6! You know me pretty well! 🤗"
-        : score + "/6! We need more cozy chats! ☕";
+    let message = "";
+    if (score === 6) message = "6/6! You totally know me! 💯✨";
+    else if (score >= 4) message = score + "/6! You know me pretty well! 🤗";
+    else message = score + "/6! We need more cozy chats! ☕";
 
     document.getElementById("moodResult").textContent = moodMessage;
     document.getElementById("scoreResult").textContent = message;
 
     document.getElementById("resultBox").style.display = "block";
     document.getElementById("messageBox").style.display = "block";
-  }
-
-  function toggleMusic() {
-    if (bgMusic.paused) {
-      bgMusic.play();
-      musicControl.innerText = "Pause Music";
-    } else {
-      bgMusic.pause();
-      musicControl.innerText = "Play Music";
-    }
   }
 </script>
 
