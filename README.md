@@ -178,7 +178,8 @@ onclick="nextSlide()">Next</button>
   <h2>✨ Your Quiz Result ✨</h2>
   <p id="moodResult"></p>
   <p id="scoreResult"></p>
-  <p><strong>I just wanna say: keep going today, tomorrow, and every day!</strong><br>
+  <p><strong>I just wanna say: keep going today, tomorrow, and every day
+    good luck for your last exam i know you will gonna make it🔥!</strong><br>
   Don’t forget: you’re amazing, smart, beautiful, and… I love u! ❤️🌈</p>
 </div>
 
