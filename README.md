@@ -102,7 +102,7 @@
     <strong>4. What do I prefer on weekends?</strong><br>
     <label><input type="radio" name="q2" value="sleep"> 🛏 Sleep all day</label>
     <label><input type="radio" name="q2" value="walk"> 🏞 Go out for a walk</label>
-    <button type="<label><input ty
+    <label><input type="radio" name="q2"
       value="Movie"> 🎬 Watching Movie</label>
     <button type="<label><input ty
 onclick="nextSlide()">Next</button>
@@ -118,57 +118,59 @@ onclick="nextSlide()">Next</button>
 
   <div class="slide">
     <strong>6. What's my favorite Hobby?</strong><br>
-    <label><input type="radio" name="q1" value="Reading"> 📖 Reading</label>
-    <label><input type="radio" name="q1" value="Gaming"> 🎮 Gaming</label>
-    <label><input type="radio" name="q1" value="Singing"> 🎤 Singing</label>
+    <label><input type="radio" name="q4" value="Reading"> 📖 Reading</label>
+    <label><input type="radio" name="q4" value="Gaming"> 🎮 Gaming</label>
+    <label><input type="radio" name="q4" value="Singing"> 🎤 Singing</label>
     <button type="button" onclick="nextSlide()">Next</button>
   </div>
 
  <div class="slide">
     <strong>7. Which genre movie do i love?</strong><br>
-    <label><input type="radio" name="q1" value="Horror"> 👻 Horror</label>
-    <label><input type="radio" name="q1" value="Comedy"> 😂 Comedy</label>
-    <label><input type="radio" name="q1" value="Romance"> 🧑‍❤️‍💋‍🧑 Romance</label>
+    <label><input type="radio" name="q5" value="Horror"> 👻 Horror</label>
+    <label><input type="radio" name="q5" value="Comedy"> 😂 Comedy</label>
+    <label><input type="radio" name="q5" value="Romance"> 🧑‍❤️‍💋‍🧑 Romance</label>
     <button type="button" onclick="nextSlide()">Next</button>
   </div>
 
   <div class="slide">
     <strong>8. What's my favorite season of the year ? </strong><strong><br>
-    <label><input type="radio" name="q1" value="Summer"> ☀️ Summer</label>
-    <label><input type="radio" name="q1" value="Winter"> ❄️ Winter</label>
-    <label><input type="radio" name="q1" value="Spring"> 🌸 Spring</label>
+    <label><input type="radio" name="q6" value="Summer"> ☀️ Summer</label>
+    <label><input type="radio" name="q6" value="Winter"> ❄️ Winter</label>
+    <label><input type="radio" name="q6" value="Spring"> 🌸 Spring</label>
     <button type="button" onclick="nextSlide()">Next</button>
   </div>
 
   <div class="slide">
     <strong>9. Which anime do i love the most?</strong><br>
-    <label><input type="radio" name="q1" value="Naruto"> 🍥 Naruto</label>
-    <label><input type="radio" name="q1" value="Violet Evergarden"> 💃 Violet Evergarden</label>
-    <label><input type="radio" name="q1" value="One Piece"> 🏴‍☠️ One Piece</label>
+    <label><input type="radio" name="q7" value="Naruto"> 🍥 Naruto</label>
+    <label><input type="radio" name="q7" value="Violet Evergarden"> 💃 Violet Evergarden</label>
+    <label><input type="radio" name="q7" value="One Piece"> 🏴‍☠️ One Piece</label>
     <button type="button" onclick="nextSlide()">Next</button>
   </div>
 
   <div class="slide">
     <strong>10. If i ware an animal,which one would i be ?</strong><br>
-    <label><input type="radio" name="q1" value="Turtle"> 🐢 Turtle(slow but steady)</label>
-    <label><input type="radio" name="q1" value="Monkey"> 🐒 Monkey(chaotic anergy)</label>
-    <label><input type="radio" name="q1" value="Unicorn"> 🦄 Unicorn(magicsl und dramatic)</label>
+    <label><input type="radio" name="q8" value="Turtle"> 🐢 Turtle(slow but steady)</label>
+    <label><input type="radio" name="q8" value="Monkey"> 🐒 Monkey(chaotic anergy)</label>
+    <label><input type="radio" name="q8" value="Unicorn"> 🦄 Unicorn(magicsl und dramatic)</label>
     <button type="button" onclick="nextSlide()">Next</button>
   </div>
 
   <div class="slide">
     <strong>11. What supperpower would suit me best ?</strong><br>
-    <label><input type="radio" name="q1" value="Sleep"> 😴 Sleep anywhere</label>
-    <label><input type="radio" name="q1" value="Teleport"> 🛸 Teleport</label>
-    <label><input type="radio" name="q1" value="Invisible"> 🫥 Invisible</label>
+    <label><input type="radio" name="q9" value="Sleep"> 😴 Sleep anywhere</label>
+    <label><input type="radio" name="q9" value="Teleport"> 🛸 Teleport</label>
+    <label><input type="radio" name="q9" value="Invisible"> 🫥 Invisible</label>
     <button type="button" onclick="nextSlide()">Next</button>
   </div>
 
   <div class="slide">
-    <strong>12. When I’m upset, I usually...</strong><br>
-    <label><input type="radio" name="q4" value="music"> 🎧 Listen to music
-    <button type="<label><input ty
-    <label><input type="radio" name="q4" value="sleep"> 💤 Sleep it off</label>
+    <strong>12. When I’m Stress, I usually...</strong><br>
+    <label><input type="radio" name="q10" value="music"> 🎧 Listen to music
+    <button type="button"
+      <label><input type="radio" name="q10" value="crying"> 😭 Crying
+    <button type="button"
+    <label><input type="radio" name="q10" value="sleep"> 💤 Sleep it off</label>
     <button type="button" onclick="showResult()">See Result</button>
   </div>
 
